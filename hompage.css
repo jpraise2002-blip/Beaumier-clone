@@ -105,3 +105,25 @@ body{
     100% {opacity:0;}
 }
 
+.nav-frame {
+    height: 80px;
+}
+.nav-frame ul {
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: center;
+    border-bottom: grey;
+    
+}
+.nav-frame li {
+    display: inline-block;
+    font-size: 1.5vw;
+    padding-right: 1.6%;   
+}
+.nav-frame li a{
+    text-decoration: none;
+    color:grey;
+    font-weight: bolder;
+}
