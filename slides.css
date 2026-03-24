@@ -1,0 +1,111 @@
+.topnav {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    margin-top: 2.8%;
+    z-index: 1500;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+.topnav #myLinks {
+    display: none;
+    margin-left: 10px;
+}
+
+.topnav a {
+    background-color:#ffffff;
+    color: grey;
+    text-decoration: none;
+    font-size:28px;
+    font-family: sans-serif;
+    height: 40px;
+    display: block;
+    padding: 5px 0px 0px;
+    font-weight: bolder;
+}
+
+.discover a{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+.destinations {
+    color: #212529;
+}
+
+.topnav a#sideBar {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin-bottom: 4.5vh;
+    color:#ffffff;
+    background-color: transparent;
+    font-size: 4vh;
+}
+#closeBtn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    color: #212529;
+    font-weight: lighter;
+}
+
+.topnav a:hover {
+    color: #212529;
+}
+.topnav a.icon:hover {
+    color:#ffffff;
+}
+.legals{
+    margin-top: 50px;
+}
+.legals a{
+    height: 20px;
+    color: black;
+    font-size:18px ;
+}
+
+.languages{
+    margin-top: 40px;
+}
+.languages .english{
+    color: black;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.socials{
+    margin-top: 40px;
+    font-size: 22px;
+}
+.spotify{
+    background-color: white;
+    border-radius: 50%;
+}
+.tiktok{
+    background-color: black;
+    color: white;
+    border-radius: 40%;
+}
+.facebook{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+.instagram{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+.linkedin{
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+}
