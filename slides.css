@@ -7,15 +7,20 @@
     z-index: 1500;
 }
 
-/* * {
+* {
     outline: 1px solid red;
-} */
+}
 
 .topnav #myLinks {
     display: none;
     margin-left: 10px;
+    width: 260px;
 }
-
+.extra-link{
+    position: absolute;
+    right: 0;
+    font-weight: lighter;
+}
 .topnav a {
     background-color:#ffffff;
     color: grey;
@@ -108,4 +113,31 @@
     background-color: black;
     color: white;
     border-radius: 20%;
+}
+
+#destLink {
+    display: none;
+    margin-left: 20px;
+}
+#foodLink{
+    display: none;
+    margin-left: 20px;
+}
+#wellLink{
+    display: none;
+    margin-left: 20px;
+}
+#galLink{
+    display: none;
+    margin-left: 20px;
+}
+
+#exitBtn{
+    position: relative;
+    font-weight: lighter;
+    display: none;
+}
+#exitBtn a {
+    font-size: 22px;
+    padding: 0;
 }
