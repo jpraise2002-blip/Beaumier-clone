@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Beaumier UI Clone</title>
     <link rel="stylesheet" href="hompage.css">
-    <link rel="stylesheet" href="slides.css">
+    <link rel="stylesheet" href="sidenav.css">
     <link rel="stylesheet" href="all.min.css">
 </head>
 
@@ -18,11 +18,30 @@
                 <div id="closeBtn">X</div>
             </a>
             <div id="myLinks">
-                <p class="discover"><a href="character.html">DISCOVER BEAUMIER</a></p>
-                <a href="javascript:void(0);"  onclick="destLinks()"><span class="destinations">DESTINATIONS<span class="extra-link">></span></span></a>
-                <a href="javascript:void(0);"  onclick="foodLinks()">FOOD & DRINK<span class="extra-link">></span></a>
-                <a href="javascript:void(0);" onclick="wellLinks()">WELLLNESS<span class="extra-link">></span></a>
-                <a href="javascript:void(0);" onclick="galLinks()">GALLERY<span class="extra-link">></span></a>
+                <p class="discover">
+                    <a href="homepage.html">DISCOVER BEAUMIER</a>
+                </p>
+                <a href="javascript:void(0);" onclick="destLinks()">
+                    <span class="destinations">DESTINATIONS
+                        <span class="extra-link"><i class="fas fa-angle-right"></i>
+                        </span>
+                    </span>
+                </a>
+                <a href="javascript:void(0);" onclick="foodLinks()">
+                    FOOD & DRINK
+                    <span class="extra-link"><i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
+                <a href="javascript:void(0);" onclick="wellLinks()">
+                    WELLLNESS
+                    <span class="extra-link"><i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
+                <a href="javascript:void(0);" onclick="galLinks()">
+                    GALLERY
+                    <span class="extra-link"><i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
                 <a href="news.html">NEWSLETTER</a>
 
                 <div class="legals">
@@ -35,59 +54,197 @@
                 </div>
 
                 <div class="socials">
-                    <i class="fab fa-linkedin-in linkedin"></i>&nbsp; <i class="fab fa-instagram instagram"></i>&nbsp; <i class="fab fa-facebook facebook"></i>&nbsp; <i class="fab fa-tiktok tiktok"></i>&nbsp; <i class="fab fa-spotify spotify"></i>
+                    <i class="fab fa-linkedin-in linkedin"></i>&nbsp; <i class="fab fa-instagram instagram"></i>&nbsp;
+                    <i class="fab fa-facebook facebook"></i>&nbsp; <i class="fab fa-tiktok tiktok"></i>&nbsp; <i
+                        class="fab fa-spotify spotify"></i>
                 </div>
             </div>
+            <div id="extraContainer">
+                <div id="exitBtn" onclick="goBack()">
+                    <a href="javascript:void(0);"><i class="fas fa-angle-left"></i>&nbsp;&nbsp;BACK</a>
+                </div>
 
-            <div id="exitBtn" onclick="goBack()">
-                <a href="javascript:void(0);"><i class="fas fa-arrow-left"></i>Back</a>
-            </div>
+                <div id="destLink" class="commonLink">
+                    <a href="####">
+                        <div class="sub">SWITZERLAND - WENGEN</div>
+                        <div>GRAND HOTEL</div>
+                        <div>BELVEDERE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - SAINT-RAPHAEL</div>
+                        <div>LES ROCHES ROUGES</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SPAIN - IBIZA</div>
+                        <div>PETUNIA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - BONNIEUX</div>
+                        <div>CAPELONGUE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - LOURMARIN</div>
+                        <div>LE MOULIN</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - LOURMARIN</div>
+                        <div>LE GALINIER</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - MEGEVE</div>
+                        <div>L'ALPAGA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - VAL THORENS</div>
+                        <div>LE VAL THORENS</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - VAL THORENS</div>
+                        <div>LE FITZ ROY</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - COURCHEVEL</div>
+                        <div>LES 3 VALLEES</div>
+                    </a>
+                </div>
 
-            <div id="destLink">
-                <a href="####">Destination 1</a>
-                <a href="####">Destination 2</a>
-                <a href="####">Destination 3</a>
-                <a href="####">Destination 4</a>
-                <a href="####">Destination 5</a>
-                <a href="####">Destination 6</a>
-                <a href="####">Destination 7</a>
-                <a href="####">Destination 8</a>
-            </div>
+                <div id="foodLink" class="commonLink">
+                    <a href="####">
+                        <div class="sub">SWITZERLAND - SWISS ALPS</div>
+                        <div>BRASSERIE BELVEDERE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">MEGEVE - ALPES FRANCAISES</div>
+                        <div>LA <TABLE>DE L'ALPAGA</TABLE></div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">MEGEVE - ALPES FRANCAISES</div>
+                        <div>LE BISTROT DE L'ALPAGA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">BONNIEUX - PROVENCE</div>
+                        <div>LE BERGERIE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - PROVENCE</div>
+                        <div>LE BASTIDE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">LOURMARIN - PROVENCE</div>
+                        <div>BACHETO</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SAINT-RAPHAEL - FRENCH RIVIERA</div>
+                        <div>LA CHICOULA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SAINT-RAPHAEL - FRENCH RIVIERA</div>
+                        <div>ESTELO</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SPAIN - IBIZA</div>
+                        <div>LA MESA D ES VEDRA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SPAIN - IBIZA</div>
+                        <div>LOS OLIVOS</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SPAIN - IBIZA</div>
+                        <div>LA MIRADA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">VAL THORENS - FRENCH ALPS</div>
+                        <div>LA FONDUE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">VAL THORENS - FRENCH ALPS</div>
+                        <div>LA BRASSERIE DU VAL</div>
+                        <div>THORENS</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">VAL THORENS - FRENCH ALPS</div>
+                        <div>BECA</div>
+                    </a>
+                </div>
 
-            <div id="foodLink">
-                <a href="####">Food 1</a>
-                <a href="####">Food 2</a>
-                <a href="####">Food 3</a>
-                <a href="####">Food 4</a>
-                <a href="####">Food 5</a>
-                <a href="####">Food 6</a>
-                <a href="####">Food 7</a>
-                <a href="####">Food 8</a>
-            </div>
+                <div id="wellLink" class="commonLink">
+                    <a href="####">
+                        <div class="sub">SWITZERLAND - WENGEN</div>
+                        <div>GRAND HOTEL</div>
+                        <div>BELVEDERE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - SAINT-RAPHAEL</div>
+                        <div>LES ROCHES ROUGES</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">SPAIN - IBIZA</div>
+                        <div>PETUNIA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - BONNIEUX</div>
+                        <div>CAPELONGUE</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - LOURMARIN</div>
+                        <div>LE MOULIN</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - LOURMARIN</div>
+                        <div>LE GALINIER</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - MEGEVE</div>
+                        <div>L'ALPAGA</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - VAL THORENS</div>
+                        <div>LE VAL THORENS</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - VAL THORENS</div>
+                        <div>LE FITZ ROY</div>
+                    </a>
+                    <a href="####">
+                        <div class="sub">FRANCE - COURCHEVEL</div>
+                        <div>LES 3 VALLEES</div>
+                    </a>
+                </div>
 
-            <div id="wellLink">
-                <a href="####">Wellness 1.0</a>
-                <a href="####">Wellness 2.0</a>
-                <a href="####">Wellness 3.0</a>
-                <a href="####">Wellness 4.0</a>
-                <a href="####">Wellness 5.0</a>
-                <a href="####">Wellness 6.0</a>
-                <a href="####">Wellness 7.0</a>
-                <a href="####">Wellness 8.0</a>
-            </div>
-
-            <div id="galLink">
-                <a href="####">Pictures 1</a>
-                <a href="####">Pictures 2</a>
-                <a href="####">Pictures 3</a>
-                <a href="####">Pictures 4</a>
-                <a href="####">Pictures 5</a>
-                <a href="####">Pictures 6</a>
-                <a href="####">Pictures 7</a>
-                <a href="####">Pictures 8</a>
+                <div id="galLink" class="commonLink">
+                    <a href="####">
+                        <div>GRAND HOTEL</div>
+                        <div>BELVEDERE</div>
+                    </a>
+                    <a href="####">
+                        <div>L'ALPAGA</div>
+                    </a>
+                    <a href="####">
+                        <div>LE VAL THORENS</div>
+                    </a>
+                    <a href="####">
+                        <div>LE FITZ ROY</div>
+                    </a>
+                    <a href="####">
+                        <div>LES ROCHES ROUGES</div>
+                    </a>
+                    <a href="####">
+                        <div>PETUNIA</div>
+                    </a>
+                    <a href="####">
+                        <div>CAPELONGUE</div>
+                    </a>
+                    <a href="####">
+                        <div>LE MOULIN</div>
+                    </a>
+                    <a href="####">
+                        <div>LE GALINIER</div>
+                    </a>
+                </div>
             </div>
         </div>
-        <div id="header">
+        <div id="header" class="header">
             <a href="homepage.html" id="headerText">Beaumier</a>
         </div>
         <div id="bookIcon">
@@ -120,7 +277,7 @@
                 </div>
             </div>
         </div>
-        <div id="nav-frame">
+        <div class="nav-frame">
             <ul>
                 <li><a href="hotels.html">OUR HOTELS</a></li>
                 <li><a href="character.html">CHARACTER</a></li>
@@ -173,7 +330,7 @@
     </div>
 
     <script src="header.js"></script>
-    <script src="slides.js"></script>
+    <script src="sidenav.js"></script>
     <script src="all.min.js"></script>
 </body>
 

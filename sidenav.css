@@ -1,28 +1,27 @@
 .topnav {
-    overflow: hidden;
     position: fixed;
     top: 0;
-    left: 5%;
+    left: 3.5%;
     margin-top: 2.8%;
+    height: 100vh;
     z-index: 1500;
 }
 
-* {
+/* * {
     outline: 1px solid red;
-}
+} */
 
 .topnav #myLinks {
     display: none;
-    margin-left: 10px;
+    margin-left: 35px;
     width: 260px;
 }
 .extra-link{
     position: absolute;
     right: 0;
-    font-weight: lighter;
 }
 .topnav a {
-    background-color:#ffffff;
+    background-color:#faf6ee;
     color: grey;
     text-decoration: none;
     font-size:28px;
@@ -34,7 +33,7 @@
 }
 
 .discover a{
-    font-size: 22px;
+    font-size: 19px;
     font-family: sans-serif;
     font-weight: lighter;
 }
@@ -48,6 +47,7 @@
     left: 0;
     top: 0;
     padding: 0;
+    margin-left: 20px;
     margin-bottom: 4.5vh;
     color:#ffffff;
     background-color: transparent;
@@ -91,45 +91,69 @@
     font-size: 22px;
 }
 .spotify{
-    background-color: white;
+    background-color: #faf6ee;
     border-radius: 50%;
 }
 .tiktok{
     background-color: black;
-    color: white;
+    color:#faf6ee;
     border-radius: 40%;
 }
 .facebook{
-    background-color: white;
+    background-color:#faf6ee;
     color: black;
     border-radius: 50%;
 }
 .instagram{
     background-color: black;
-    color: white;
+    color: #faf6ee;
     border-radius: 50%;
 }
 .linkedin{
     background-color: black;
-    color: white;
+    color: #faf6ee;
     border-radius: 20%;
+}
+#extraContainer {
+    display: none;
+    width: 96.5vw;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 #destLink {
     display: none;
-    margin-left: 20px;
+    margin-bottom: 21%;
+} 
+.commonLink a{
+    height: fit-content;
+    font-size: 24px;
+    color: #000000;
+    padding: 3px 0px 9px;
+    margin-bottom: 10px;
 }
+.commonLink a:hover{
+    color: black;
+}
+.sub {
+    font-size:14px;
+    padding-bottom: 5px;
+    font-weight: lighter;
+}
+
 #foodLink{
     display: none;
-    margin-left: 20px;
+    margin-bottom: 21%;
 }
+
 #wellLink{
     display: none;
-    margin-left: 20px;
+    margin-bottom: 21%;
 }
+
 #galLink{
     display: none;
-    margin-left: 20px;
+    margin-bottom: 21%;
 }
 
 #exitBtn{
@@ -138,6 +162,8 @@
     display: none;
 }
 #exitBtn a {
-    font-size: 22px;
+    color: #212529;
+    font-weight: bold;
+    font-size: 20px;
     padding: 0;
 }

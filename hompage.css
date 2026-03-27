@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color:#ffffff;
+    background-color:#faf6ee;
 }
 
 #bookIcon{
@@ -8,7 +8,7 @@ body{
     top: 0;
     right: 5%;
     font-size: 30px;
-    width: 120px;
+    width: 130px;
     text-align: center;
     margin-top: 2% ;
     cursor: pointer;
@@ -18,35 +18,52 @@ body{
     padding: 5px;
     z-index: 1000;
 }
+#bookIcon:hover{
+    color: #ffffff;
+    background-color: black;
+}
+#bookIcon.book-tab{
+    background-color: black;
+    color: #ffffff;
+}
+#bookIcon.book-tab:hover {
+    background-color: #ffffff;
+    color: black;
+}
 
-#header a{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     text-align: center;
     height:fit-content;
     margin-top: 10px;
-    color:#ffffff;
     width: 100%;
-    font-size: 4.6vw;
-    font-weight:normal;
-    text-decoration: none;
-    font-style:italic;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    /* text-shadow: 0 2PX 5px rgba(0, 0, 0, 0.5); */
     background: transparent;
     z-index: 1000;
 }
+.header a {
+    color:#ffffff;
+}
+#header a {
+    text-decoration: none;
+    font-size: 4.6vw;
+    font-weight:normal;
+    font-style:italic;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
 
-.scrolled{
-    background-color:#ffffff;
-    color: black;
+.scrolled {
+    background-color:#faf6ee;
     margin-top: 0;
     padding-bottom: 10px;
     padding-top: 10px;
 }
+.scrolled a {
+    color: black;
+}
 
-@media (min-width:150px) {
+@media (min-width:1070px) {
     .nav-frame{
         position: relative;
     }
@@ -144,14 +161,14 @@ body{
     padding: 10px 40px;
 }
 
-#nav-frame {
+.nav-frame {
     top: 8%;
     height: 40px;
     z-index: 900;
     border-bottom-style:groove;
     
 }
-#nav-frame ul {
+.nav-frame ul {
     margin-top: 1.5%;
     margin-bottom: 2%;
     margin-left: 3%;
@@ -159,18 +176,18 @@ body{
     text-align: center;
     
 }
-#nav-frame li {
+.nav-frame li {
     display: inline-block;
     font-size: 1.5vw;
     margin: 0.5%;
 }
-#nav-frame li a{
+.nav-frame li a{
     font-family: sans-serif;
     text-decoration: none;
     color:grey;
     font-weight: bolder;
 }
-#nav-frame li a:hover{
+.nav-frame li a:hover{
     color:#212529;
     font-weight: bolder;
 }
