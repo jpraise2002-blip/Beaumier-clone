@@ -1,7 +1,7 @@
 
 const sideBar = document.getElementById('sideBar');
 const myLinks = document.getElementById('myLinks');
-const mainContent = document.getElementById('mainContent');
+const slideView = document.getElementById('slideView');
 const headerText = document.getElementById('headerText');
 const bookIcon = document.getElementById('bookIcon');
 const closeBtn = document.getElementById('closeBtn');
@@ -9,14 +9,14 @@ const closeBtn = document.getElementById('closeBtn');
 sideBar.addEventListener('click', function () {
     if (myLinks.style.display === 'none') {
         myLinks.style.display = 'block';
-        mainContent.style.display = 'none';
+        slideView.style.display = 'none';
         headerText.style.color = '#212529';
         bookIcon.classList.add('book-tab');
         closeBtn.style.display = 'block';
     } else {
         myLinks.style.display = 'none';
         extraContainer.style.display = 'none';
-        mainContent.style.display = 'block';
+        slideView.style.display = 'block';
         headerText.style.color = '#ffffff';
         bookIcon.classList.remove('book-tab');
         closeBtn.style.display = 'none';
