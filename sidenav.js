@@ -5,25 +5,19 @@ const slideView = document.getElementById('slideView');
 const headerText = document.getElementById('headerText');
 const bookIcon = document.getElementById('bookIcon');
 const closeBtn = document.getElementById('closeBtn');
+let sideNav0pen = false;
 
-sideBar.addEventListener('click', function () {
-    if (myLinks.style.display === 'none') {
+sideBar.addEventListener('click', function (event) {
+    if (!sideNav0pen) {
+        event.preventDefault();
         myLinks.style.display = 'block';
+        sideNav0pen = true;
         slideView.style.display = 'none';
         headerText.style.color = '#212529';
         bookIcon.classList.add('book-tab');
         closeBtn.style.display = 'block';
     } else {
-        myLinks.style.display = 'none';
-        extraContainer.style.display = 'none';
-        slideView.style.display = 'block';
-        headerText.style.color = '#ffffff';
-        bookIcon.classList.remove('book-tab');
-        closeBtn.style.display = 'none';
-        destLink.style.display = 'none';
-        foodLink.style.display = 'none';
-        wellLink.style.display = 'none';
-        galLink.style.display = 'none';
+        window.location.href = 'homepage.html';
     }
 });
 
