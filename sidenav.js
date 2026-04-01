@@ -1,7 +1,7 @@
 
 const sideBar = document.getElementById('sideBar');
 const myLinks = document.getElementById('myLinks');
-const slideView = document.getElementById('slideView');
+const mainContent = document.getElementById('mainContent');
 const headerText = document.getElementById('headerText');
 const bookIcon = document.getElementById('bookIcon');
 const closeBtn = document.getElementById('closeBtn');
@@ -12,7 +12,7 @@ sideBar.addEventListener('click', function (event) {
         event.preventDefault();
         myLinks.style.display = 'block';
         sideNav0pen = true;
-        slideView.style.display = 'none';
+        mainContent.style.display = 'none';
         headerText.style.color = '#212529';
         bookIcon.classList.add('book-tab');
         closeBtn.style.display = 'block';
