@@ -17,7 +17,7 @@ sideBar.addEventListener('click', function (event) {
         bookIcon.classList.add('book-tab');
         closeBtn.style.display = 'block';
     } else {
-        window.location.href = 'homepage.html';
+        window.location.href = 'index.html';
     }
 });
 
