@@ -1,13 +1,37 @@
 
 const sideBar = document.getElementById('sideBar');
 const myLinks = document.getElementById('myLinks');
+const mySecondLink = document.getElementById('mySecondLink');
 const mainContent = document.getElementById('mainContent');
 const headerText = document.getElementById('headerText');
 const bookIcon = document.getElementById('bookIcon');
 const closeBtn = document.getElementById('closeBtn');
+const wideContainer = document.getElementById('wideContainer');
 let sideNav0pen = false;
 
-sideBar.addEventListener('click', function (event) {
+// sideBar.addEventListener('click', function (event) {
+//     if (!sideNav0pen) {
+//         event.preventDefault();
+//         myLinks.style.display = 'block';
+//         sideNav0pen = true;
+//         mainContent.style.display = 'none';
+//         headerText.style.color = '#212529';
+//         bookIcon.classList.add('book-tab');
+//         closeBtn.style.display = 'block';
+//     } else {
+//         window.location.href = 'index.html';
+//     }
+// });
+
+sideBar.addEventListener('click', function () {
+    if (window.matchMedia("(max-width: 1170px)"). matches) {
+        smallScreen(event);
+    } else {
+        largeScreen(event);
+    }
+})
+
+function smallScreen(event) {
     if (!sideNav0pen) {
         event.preventDefault();
         myLinks.style.display = 'block';
@@ -19,7 +43,22 @@ sideBar.addEventListener('click', function (event) {
     } else {
         window.location.href = 'index.html';
     }
-});
+};
+
+function largeScreen(event) {
+    if (!sideNav0pen) {
+        event.preventDefault();
+        wideContainer.style.display = 'block';
+        // mySecondLink.style.display = 'block';
+        sideNav0pen = true;
+        mainContent.style.display = 'none';
+        headerText.style.color = '#212529';
+        bookIcon.classList.add('book-tab');
+        closeBtn.style.display = 'block';
+    } else {
+        window.location.href = 'index.html';
+    }
+}
 
 
 const destLink = document.getElementById('destLink');

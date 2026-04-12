@@ -1,0 +1,18 @@
+.container #linkNav {
+    font-size: 20px;
+    color:green;
+}
+.container2 #linkNav2 {
+    font-size: 20px;
+    color:blue;
+}
+
+.d-link{
+    display: none;
+} 
+.active {
+    display: block;
+}
+
+
+
