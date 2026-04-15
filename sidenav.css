@@ -209,7 +209,9 @@
     position: absolute;
     top: 12%;
     left: 0%;
-    margin-left:26% ;
+    /* margin-left: 26%; */
+    margin-left:21.8% ;
+    /* padding-left: 4.2%; */
     display: block;
     width: max-content;
     height: max-content;
@@ -229,9 +231,11 @@
 } 
 .commonLink2nd a{
     height: fit-content;
+    width: max-content;
     font-size: 130%;
     color: #000000;
     padding: 5% 0 0%;
+    padding-left: 22.2%;
     margin-bottom: 4%;
 }
 .commonLink2nd a:hover{

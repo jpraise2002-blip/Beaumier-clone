@@ -146,3 +146,56 @@ function goBack() {
     }
 }
 
+const destLink2nd = document.getElementById('destLink2nd');
+const foodLink2nd = document.getElementById('foodLink2nd');
+const wellLink2nd = document.getElementById('wellLink2nd');
+const galLink2nd = document.getElementById('galLink2nd');
+const foodId = document.getElementById('foodId');
+const wellId = document.getElementById('wellId');
+const galId = document.getElementById('galId');
+
+
+function foodNavHoverOver () {
+    
+        destLink2nd.style.display = 'none';
+        foodLink2nd.style.display = 'block';
+        foodId.style.color = 'black';
+    
+}
+function foodNavHoverLeave () {
+    
+        destLink2nd.style.display = 'block';
+        foodLink2nd.style.display = 'none';
+        foodId.style.color = '#808080';
+    
+}
+
+function wellNavHoverOver () {
+    
+        destLink2nd.style.display = 'none';
+        wellLink2nd.style.display = 'block';
+        wellId.style.color = 'black';
+    
+}
+function wellNavHoverLeave () {
+    
+        destLink2nd.style.display = 'block';
+        wellLink2nd.style.display = 'none';
+        wellId.style.color = '#808080';
+    
+}
+
+function galNavHoverOver () {
+    
+        destLink2nd.style.display = 'none';
+        galLink2nd.style.display = 'block';
+        galId.style.color = 'black';
+    
+}
+function galNavHoverLeave () {
+    
+        destLink2nd.style.display = 'block';
+        galLink2nd.style.display = 'none';
+        galId.style.color = '#808080';
+    
+}
