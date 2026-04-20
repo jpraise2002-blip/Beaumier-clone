@@ -49,7 +49,6 @@ function largeScreen(event) {
     if (!sideNav0pen) {
         event.preventDefault();
         wideContainer.style.display = 'block';
-        // mySecondLink.style.display = 'block';
         sideNav0pen = true;
         mainContent.style.display = 'none';
         headerText.style.color = '#212529';
@@ -153,12 +152,20 @@ const galLink2nd = document.getElementById('galLink2nd');
 const foodId = document.getElementById('foodId');
 const wellId = document.getElementById('wellId');
 const galId = document.getElementById('galId');
+const leadPic = document.getElementById('leadPic');
+const foodPic = document.getElementById('foodPic');
+const wellPic = document.getElementById('wellPic');
+const galPic = document.getElementById('galPic');
+const desPicSub1 = document.getElementById('desPicSub1');
+const foodPicSub1 = document.getElementById('foodPicSub1');
 
 
 function foodNavHoverOver () {
     
         destLink2nd.style.display = 'none';
         foodLink2nd.style.display = 'block';
+        leadPic.style.display = 'none';
+        foodPic.style.display = 'block';
         foodId.style.color = 'black';
     
 }
@@ -166,6 +173,8 @@ function foodNavHoverLeave () {
     
         destLink2nd.style.display = 'block';
         foodLink2nd.style.display = 'none';
+        leadPic.style.display = 'block';
+        foodPic.style.display = 'none';
         foodId.style.color = '#808080';
     
 }
@@ -174,6 +183,8 @@ function wellNavHoverOver () {
     
         destLink2nd.style.display = 'none';
         wellLink2nd.style.display = 'block';
+        leadPic.style.display = 'none';
+        wellPic.style.display = 'block';
         wellId.style.color = 'black';
     
 }
@@ -181,6 +192,8 @@ function wellNavHoverLeave () {
     
         destLink2nd.style.display = 'block';
         wellLink2nd.style.display = 'none';
+        leadPic.style.display = 'block';
+        wellPic.style.display = 'none';
         wellId.style.color = '#808080';
     
 }
@@ -189,6 +202,8 @@ function galNavHoverOver () {
     
         destLink2nd.style.display = 'none';
         galLink2nd.style.display = 'block';
+        leadPic.style.display = 'none';
+        galPic.style.display = 'block';
         galId.style.color = 'black';
     
 }
@@ -196,6 +211,22 @@ function galNavHoverLeave () {
     
         destLink2nd.style.display = 'block';
         galLink2nd.style.display = 'none';
+        leadPic.style.display = 'block';
+        galPic.style.display = 'none';
         galId.style.color = '#808080';
     
 }
+
+
+const links = document.querySelectorAll('.image-hover-link');
+
+links.forEach(link => {
+    link.addEventListener('mouseenter', function () {
+        const imageId = this.dataset.img;
+        document.getElementById(imageId).style.display = 'block';
+    });
+    link.addEventListener('mouseleave', function () {
+        const imageId = this.dataset.img;
+        document.getElementById(imageId).style.display = 'none';
+    });
+})
