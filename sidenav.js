@@ -1,4 +1,3 @@
-
 const sideBar = document.getElementById('sideBar');
 const myLinks = document.getElementById('myLinks');
 const mySecondLink = document.getElementById('mySecondLink');
@@ -7,57 +6,81 @@ const headerText = document.getElementById('headerText');
 const bookIcon = document.getElementById('bookIcon');
 const closeBtn = document.getElementById('closeBtn');
 const wideContainer = document.getElementById('wideContainer');
+const smallContainer = document.getElementById('smallContainer');
 let sideNav0pen = false;
 
-// sideBar.addEventListener('click', function (event) {
-//     if (!sideNav0pen) {
-//         event.preventDefault();
-//         myLinks.style.display = 'block';
-//         sideNav0pen = true;
-//         mainContent.style.display = 'none';
-//         headerText.style.color = '#212529';
-//         bookIcon.classList.add('book-tab');
-//         closeBtn.style.display = 'block';
-//     } else {
-//         window.location.href = 'index.html';
-//     }
-// });
+
 
 sideBar.addEventListener('click', function () {
-    if (window.matchMedia("(max-width: 1170px)"). matches) {
+    if (window.matchMedia("(max-width: 1170px)").matches) {
         smallScreen(event);
     } else {
         largeScreen(event);
     }
 })
 
+
 function smallScreen(event) {
     if (!sideNav0pen) {
         event.preventDefault();
-        myLinks.style.display = 'block';
         sideNav0pen = true;
-        mainContent.style.display = 'none';
-        headerText.style.color = '#212529';
-        bookIcon.classList.add('book-tab');
-        closeBtn.style.display = 'block';
+        smallScreenDisplay();
     } else {
         window.location.href = 'index.html';
     }
 };
+function smallScreenDisplay() {
+    smallContainer.style.display = 'block';
+    mainContent.style.display = 'none';
+    headerText.style.color = '#212529';
+    bookIcon.classList.add('book-tab');
+    closeBtn.style.display = 'block';
+}
+
 
 function largeScreen(event) {
     if (!sideNav0pen) {
         event.preventDefault();
-        wideContainer.style.display = 'block';
         sideNav0pen = true;
-        mainContent.style.display = 'none';
-        headerText.style.color = '#212529';
-        bookIcon.classList.add('book-tab');
-        closeBtn.style.display = 'block';
+        largeScreenDisplay();
     } else {
         window.location.href = 'index.html';
     }
 }
+function largeScreenDisplay() {
+    wideContainer.style.display = 'block';
+    mainContent.style.display = 'none';
+    headerText.style.color = '#212529';
+    bookIcon.classList.add('book-tab');
+    closeBtn.style.display = 'block';
+}
+
+function smallScreenResize() {
+    wideContainer.style.display = 'none';
+    smallContainer.style.display = 'block';
+    mainContent.style.display = 'none';
+    headerText.style.color = '#212529';
+    bookIcon.classList.add('book-tab');
+    closeBtn.style.display = 'block';
+}
+
+function largeScreenResize() {
+    smallContainer.style.display = 'none';
+    wideContainer.style.display = 'block';
+    mainContent.style.display = 'none';
+    headerText.style.color = '#212529';
+    bookIcon.classList.add('book-tab');
+    closeBtn.style.display = 'block';
+}
+window.addEventListener('resize', function () {
+    if (sideNav0pen) {
+        if (window.matchMedia("(max-width: 1170px)").matches) {
+            smallScreenResize();
+        } else {
+            largeScreenResize();
+        }
+    }
+})
 
 
 const destLink = document.getElementById('destLink');
@@ -92,12 +115,12 @@ function foodLinks() {
         wellLink.style.display = 'none';
         galLink.style.display = 'none';
         exitBtn.style.display = 'block';
-        
+
     } else {
         extraContainer.style.display = 'none';
         foodLink.style.display = 'none';
         myLinks.style.display = 'block';
-        
+
     }
 };
 
@@ -110,12 +133,12 @@ function wellLinks() {
         foodLink.style.display = 'none';
         galLink.style.display = 'none';
         exitBtn.style.display = 'block';
-        
+
     } else {
         extraContainer.style.display = 'none';
         wellLink.style.display = 'none';
         myLinks.style.display = 'block';
-        
+
     }
 };
 
@@ -128,12 +151,12 @@ function galLinks() {
         foodLink.style.display = 'none';
         wellLink.style.display = 'none';
         exitBtn.style.display = 'block';
-        
+
     } else {
         extraContainer.style.display = 'none';
         galLink.style.display = 'none';
         myLinks.style.display = 'block';
-        
+
     }
 };
 
@@ -153,68 +176,57 @@ const foodId = document.getElementById('foodId');
 const wellId = document.getElementById('wellId');
 const galId = document.getElementById('galId');
 const leadPic = document.getElementById('leadPic');
-const foodPic = document.getElementById('foodPic');
-const wellPic = document.getElementById('wellPic');
-const galPic = document.getElementById('galPic');
-const desPicSub1 = document.getElementById('desPicSub1');
-const foodPicSub1 = document.getElementById('foodPicSub1');
 
 
-function foodNavHoverOver () {
-    
-        destLink2nd.style.display = 'none';
-        foodLink2nd.style.display = 'block';
-        leadPic.style.display = 'none';
-        foodPic.style.display = 'block';
-        foodId.style.color = 'black';
-    
+function foodNavHoverOver() {
+
+    destLink2nd.style.display = 'none';
+    foodLink2nd.style.display = 'block';
+    leadPic.style.display = 'none';
+    foodId.style.color = 'black';
+
 }
-function foodNavHoverLeave () {
-    
-        destLink2nd.style.display = 'block';
-        foodLink2nd.style.display = 'none';
-        leadPic.style.display = 'block';
-        foodPic.style.display = 'none';
-        foodId.style.color = '#808080';
-    
+function foodNavHoverLeave() {
+
+    destLink2nd.style.display = 'block';
+    foodLink2nd.style.display = 'none';
+    leadPic.style.display = 'block';
+    foodId.style.color = '#808080';
+
 }
 
-function wellNavHoverOver () {
-    
-        destLink2nd.style.display = 'none';
-        wellLink2nd.style.display = 'block';
-        leadPic.style.display = 'none';
-        wellPic.style.display = 'block';
-        wellId.style.color = 'black';
-    
+function wellNavHoverOver() {
+
+    destLink2nd.style.display = 'none';
+    wellLink2nd.style.display = 'block';
+    leadPic.style.display = 'none';
+    wellId.style.color = 'black';
+
 }
-function wellNavHoverLeave () {
-    
-        destLink2nd.style.display = 'block';
-        wellLink2nd.style.display = 'none';
-        leadPic.style.display = 'block';
-        wellPic.style.display = 'none';
-        wellId.style.color = '#808080';
-    
+function wellNavHoverLeave() {
+
+    destLink2nd.style.display = 'block';
+    wellLink2nd.style.display = 'none';
+    leadPic.style.display = 'block';
+    wellId.style.color = '#808080';
+
 }
 
-function galNavHoverOver () {
-    
-        destLink2nd.style.display = 'none';
-        galLink2nd.style.display = 'block';
-        leadPic.style.display = 'none';
-        galPic.style.display = 'block';
-        galId.style.color = 'black';
-    
+function galNavHoverOver() {
+
+    destLink2nd.style.display = 'none';
+    galLink2nd.style.display = 'block';
+    leadPic.style.display = 'none';
+    galId.style.color = 'black';
+
 }
-function galNavHoverLeave () {
-    
-        destLink2nd.style.display = 'block';
-        galLink2nd.style.display = 'none';
-        leadPic.style.display = 'block';
-        galPic.style.display = 'none';
-        galId.style.color = '#808080';
-    
+function galNavHoverLeave() {
+
+    destLink2nd.style.display = 'block';
+    galLink2nd.style.display = 'none';
+    leadPic.style.display = 'block';
+    galId.style.color = '#808080';
+
 }
 
 
@@ -224,9 +236,11 @@ links.forEach(link => {
     link.addEventListener('mouseenter', function () {
         const imageId = this.dataset.img;
         document.getElementById(imageId).style.display = 'block';
+        leadPic.style.display = 'none';
     });
     link.addEventListener('mouseleave', function () {
         const imageId = this.dataset.img;
         document.getElementById(imageId).style.display = 'none';
+        leadPic.style.display = 'block';
     });
 })
