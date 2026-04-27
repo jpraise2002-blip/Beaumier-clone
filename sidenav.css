@@ -14,7 +14,7 @@
     position: absolute;
     display: block;
     margin-left: 80%;
-    width: 510%;
+    width: 1000%;
 }
 #smallContainer {
     display: none;
@@ -50,7 +50,7 @@
     left: 0;
     top: 0;
     padding: 0;
-    margin-left:20px;
+    margin-left:100%;
     margin-bottom: 4.5vh;
     color:#faf6ee;
     background-color: transparent;
@@ -123,9 +123,10 @@
 #extraContainer {
     position: inherit;
     top: 12%;
+    margin-bottom: 30%;
     display: none;
     width: 96.5vw;
-    height: 100vh;
+    height: 90vh;
     overflow-y: auto;
 }
 

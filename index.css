@@ -7,17 +7,17 @@ body {
     position: fixed;
     top: 0;
     right: 5%;
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 105%;
+    font-weight: bold;
     font-family: sans-serif;
-    width: 130px;
     text-align: center;
     margin-top: 2%;
+    padding: 1% 4%;
+    width: fit-content;
     cursor: pointer;
     background-color: #ffffff;
     color: black;
     transition: 0.3s;
-    padding: 5px;
     z-index: 1000;
 }
 
@@ -43,7 +43,7 @@ body {
     left: 0;
     text-align: center;
     height: fit-content;
-    margin-top: 2%;
+    margin-top: 2.5%;
     width: 100%;
     background: transparent;
     z-index: 1000;
@@ -51,27 +51,34 @@ body {
 
 .header a {
     color: #ffffff;
+
 }
 
 #header a {
     text-decoration: none;
-    font-size: 40px;
+    font-size: 150%;
     font-weight: normal;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.scrolled {
+.scrolled-header {
     background-color: #faf6ee;
     margin-top: 0;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
-.scrolled a {
+.scrolled-header a {
     color: black;
 }
 
+.scrolled-nav {
+    background-color: #faf6ee;
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
 
 .header-slideshow {
     position: relative;
@@ -186,7 +193,7 @@ body {
     transform: translate(-50%, -50%);
     color: #ffffff;
     text-shadow: 0 2PX 5px rgba(0, 0, 0, 0.5);
-    font-size: 3vh;
+    font-size: 2.4vw;
     font-family: sans-serif;
     font-weight: bold;
     font-style: normal;
@@ -195,10 +202,13 @@ body {
     border-style: solid;
     border-color: grey;
     border-width: 0.5px;
-    padding: 10px 40px;
+    padding: 1% 4%;
 }
 
 .nav-frame {
+    position: sticky;
+    top: 8%;
+    border-bottom-style: groove;
     height: 40px;
     z-index: 900;
 
@@ -237,34 +247,49 @@ body {
     transform: translate(-50%);
     color: #212529;
     line-height: 150%;
+    font-size: 140%;
+    text-align: center;
+    width: 85%;
 }
 
 .content-2 {
     color: #212529;
+    position: relative;
+    left: 15%;
+    transform: translate(-8%);
+    width: 85%;
+    max-width: 80vw;
+    padding: 5% 0 0;
 }
 
 .h1 {
-    font-size: 33px;
+    font-size: 170%;
     font-weight: bolder;
-    padding: 0px 0px 9px;
-    margin: 0px;
+    padding: 0 0 2%;
+    margin: 0;
 }
 
 .p1 {
-    font-size: 21px;
-    margin: 0px;
+    font-size: 130%;
+    margin: 0;
 }
 
 .book-link {
+    position: relative;
+    margin-left: 7%;
     font-family: sans-serif;
-    font-size: 21px;
-    margin-top: 60px;
+    font-size: 120%;
+    margin-top: 6%;
 }
 
 .first-display {
-    width: 78vw;
-    height: 550px;
-    margin-bottom: 30px;
+    position: relative;
+    left: 15%;
+    transform: translate(-13.5%);
+    max-width: 50vw;
+    margin-top: 5%;
+    height: 60vh;
+    margin-bottom: 15%;
 }
 
 img {
@@ -274,9 +299,9 @@ img {
 .img-1 {
     position: absolute;
     left: 15%;
-    width: 32vw;
-    max-width: 285px;
-    height: 54vh;
+    width: 20vw;
+    max-width: 25vw;
+    height: 60%;
     border: 10px solid white;
     z-index: 3;
 }
@@ -284,108 +309,81 @@ img {
 .img-2 {
     position: absolute;
     top: 10%;
-    width: 45vw;
-    max-width: 400px;
-    height: 62vh;
+    width: 28vw;
+    max-width: 29vw;
+    height: 70%;
     right: 0;
     z-index: 2;
 }
 
 .img-3 {
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 0;
-    width: 25vw;
-    height: 240px;
-    max-width: 225px;
+    width: 17vw;
+    height: 60%;
+    max-width: 25vw;
     z-index: 4;
 }
 
-@media (min-width:1170px) {
-    #bookIcon {
-        position: fixed;
-        top: 0;
-        right: 7%;
-        width:fit-content;
-        padding: 15px 53px;
-        font-size: 1.5vw;
-    }
-    
-    .nav-frame {
-        position: sticky;
-        top: 10%;
-        margin-bottom: 45px;
-        padding-bottom: 35px;
-    }
+@media (768px <=width <=1170px) {
 
-    .content {
-        text-align: center;
-        width: 800px;
-        font-size: 27.5px;
-    }
-
-    .content-2 {
-        position: relative;
-        left: 15%;
-        transform: translate(-10%);
-        width: 450px;
-        margin-top: 110px;
-        padding: 45px 0px 0px;
-    }
-
-    .book-link {
-        position: relative;
-        left: 11%;
-        transform: translate(1%);
-    }
-
-    .first-display {
-        position: absolute;
-        top: 153%;
-        right: 6%;
-        max-width: 600px;
-    }
-
-}
-
-@media (max-width:1170px) {
-    #header a{
-        font-size: 35px;
+    #header a {
+        font-size: 190%;
     }
 
     #bookIcon {
         position: fixed;
         top: 0;
         right: 7%;
-        width:fit-content;
-        padding: 13px 45px;
-        font-size: 2vw;
+        width: fit-content;
+        padding: 1% 4%;
+        font-size: 105%;
+    }
+
+    .text3 a {
+        font-size: 2.4vw;
     }
 
     .nav-frame {
         position: sticky;
         top: 8%;
+        padding-top: 0.2%;
         border-bottom-style: groove;
     }
 
+    .scrolled-header {
+        padding-top: 2.5%;
+        padding-bottom: 2%;
+    }
+
+    .scrolled-nav {
+        padding-top: 1%;
+        padding-bottom: 1.5%;
+    }
+
     .content {
-        font-size: 24px;
+        font-size: 140%;
         text-align: center;
         width: 85%;
+    }
+
+    .h1 {
+        font-size: 170%;
     }
 
     .content-2 {
         position: relative;
         left: 15%;
         transform: translate(-8%);
-        width:85%;
-        max-width: 800px;
-        padding: 45px 0px 0px;
+        width: 85%;
+        max-width: 80vw;
+        padding: 5% 0 0;
     }
 
     .book-link {
         position: relative;
-        left: 15%;
+        margin-left: 13%;
         transform: translate(-6.5%);
     }
 
@@ -393,11 +391,135 @@ img {
         position: relative;
         left: 15%;
         transform: translate(-13.5%);
-        max-width: 700px;
-        margin-top: 100px;
+        max-width: 50vw;
+        margin-top: 5%;
+        height: 70vh;
+    }
+
+    .img-1 {
+        width: 20vw;
+        height: 70%;
+    }
+
+    .img-2 {
+        width: 28vw;
+        height: 80%;
+    }
+
+    .img-3 {
+        width: 17vw;
+        height: 70%;
     }
 
 }
+
+@media (min-width:1170px) {
+
+    #header a {
+        font-size: 210%;
+    }
+
+    #bookIcon {
+        position: fixed;
+        top: 0;
+        right: 7%;
+        width: fit-content;
+        padding: 1% 4%;
+        font-size: 105%;
+    }
+
+    .text3 a {
+        font-size: 2vw;
+    }
+
+    .scrolled-header {
+        padding-top: 2.5%;
+        padding-bottom: 2%;
+    }
+
+    .scrolled-nav {
+        padding-top: 1%;
+        padding-bottom: 1.5%;
+    }
+
+    .nav-frame {
+        position: sticky;
+        top: 10%;
+        margin-bottom: 4%;
+        padding-bottom: 0.8%;
+    }
+
+    .content {
+        text-align: center;
+        width: 60vw;
+        font-size: 170%;
+    }
+
+    .h1 {
+        font-size: 170%;
+    }
+
+    .content-2 {
+        position: relative;
+        left: 15%;
+        transform: translate(-10%);
+        width: 33vw;
+        font-size: 105%;
+        margin-top: 5%;
+        padding: 5% 0 0;
+    }
+
+    .book-link {
+        position: relative;
+        left: auto;
+        margin-left: 11%;
+        margin-bottom: 10%;
+    }
+
+    .first-display {
+        position: absolute;
+        left: auto;
+        transform: none;
+        right: 6%;
+        top: 140%;
+        max-width: 42vw;
+        height: 70vh;
+    }
+
+
+    .img-1 {
+        position: relative;
+        left: 10%;
+        width: 20vw;
+        height: 70%;
+        max-width: 25vw;
+        border: 10px solid white;
+        z-index: 3;
+    }
+
+    .img-2 {
+        position: absolute;
+        top: 10%;
+        width: 20vw;
+        height: 80%;
+        max-width: 29vw;
+        left: 50%;
+        z-index: 2;
+    }
+
+    .img-3 {
+        position: relative;
+        top: 25%;
+        left: -70%;
+        width: 17vw;
+        height: 60%;
+        max-width: 25vw;
+        z-index: 4;
+    }
+
+}
+
+
 
 /* * {
     outline: 1px solid red;

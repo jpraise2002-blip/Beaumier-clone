@@ -12,10 +12,10 @@ let sideNav0pen = false;
 
 
 sideBar.addEventListener('click', function () {
-    if (window.matchMedia("(max-width: 1170px)").matches) {
-        smallScreen(event);
-    } else {
+    if (window.matchMedia("(min-width: 1170px)").matches) {
         largeScreen(event);
+    } else {
+        smallScreen(event);
     }
 })
 
@@ -74,10 +74,12 @@ function largeScreenResize() {
 }
 window.addEventListener('resize', function () {
     if (sideNav0pen) {
-        if (window.matchMedia("(max-width: 1170px)").matches) {
+        if (window.matchMedia("(min-width: 1170px)").matches) {
+            largeScreenResize();
+        } else if (window.matchMedia("(768 <= width <= 1170px)").matches) {
             smallScreenResize();
         } else {
-            largeScreenResize();
+            smallScreenResize();
         }
     }
 })

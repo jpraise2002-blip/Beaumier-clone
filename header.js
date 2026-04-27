@@ -6,10 +6,10 @@ window.addEventListener('scroll', function(){
     const bookIcon = document.getElementById('bookIcon');
 
     if(window.scrollY > 1){
-        header.classList.add('scrolled');
+        header.classList.add('scrolled-header');
         bookIcon.classList.add('book-tab');
     }else{
-        header.classList.remove('scrolled');
+        header.classList.remove('scrolled-header');
         bookIcon.classList.remove('book-tab');
     }
 });
@@ -19,8 +19,8 @@ window.addEventListener('scroll', function(){
     const navFrame = document.querySelector(".nav-frame");
 
     if(window.scrollY > 100){
-        navFrame.classList.add('scrolled');
+        navFrame.classList.add('scrolled-nav');
     }else{
-        navFrame.classList.remove('scrolled');
+        navFrame.classList.remove('scrolled-nav');
     }
 });
