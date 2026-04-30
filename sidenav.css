@@ -175,7 +175,7 @@
 
 #foodLink {
     display: none;
-    margin-bottom: 21%;
+    margin-bottom: 31%;
 }
 
 #wellLink {
@@ -354,6 +354,7 @@
     display: none;
 }
 
+
 @media (max-height:500px) {
     .topnav #myLinks {
         position: absolute;
@@ -394,5 +395,6 @@
 
     .socials {
         margin-top: 1.5em;
+        margin-bottom: 8rem;
     }
 }
