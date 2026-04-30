@@ -7,7 +7,6 @@ body {
     position: fixed;
     top: 0;
     right: 5%;
-    /* font-size: 105%; */
     font-size: 1.2rem;
     font-weight: bold;
     font-family: sans-serif;
@@ -57,7 +56,6 @@ body {
 
 #header a {
     text-decoration: none;
-    /* font-size: 150%; */
     font-size: 1.3rem;
     font-weight: normal;
     font-style: italic;
@@ -219,9 +217,8 @@ body {
 .nav-frame ul {
     margin-top: 1.5%;
     margin-bottom: 1%;
-    /* margin-left: 3%; */
+    margin-left: 0;
     margin-right: 3%;
-    /* padding-top: 1.5%; */
     text-align: center;
 
 }
@@ -250,7 +247,6 @@ body {
     transform: translate(-50%);
     color: #212529;
     line-height: 150%;
-    /* font-size: 140%; */
     font-size: 1.3rem;
     text-align: center;
     width: 85%;
@@ -267,7 +263,6 @@ body {
 }
 
 .h1 {
-    /* font-size: 170%; */
     font-size: 1.3rem;
     font-weight: bolder;
     padding: 0 0 2%;
@@ -275,7 +270,6 @@ body {
 }
 
 .p1 {
-    /* font-size: 130%; */
     font-size: 1.2rem;
     margin: 0;
 }
@@ -284,7 +278,6 @@ body {
     position: relative;
     margin-left: 7%;
     font-family: sans-serif;
-    /* font-size: 120%; */
     font-size: 0.98rem;
     margin-top: 6%;
 }
@@ -295,7 +288,6 @@ body {
     transform: translate(-13.5%);
     max-width: 60vw;
     margin-top: 5%;
-    /* height: 60vh; */
     height: 20rem;
     margin-bottom: 0;
 }
@@ -371,14 +363,12 @@ img {
     }
 
     .content {
-        /* font-size: 140%; */
         font-size: 2rem;
         text-align: center;
         width: 85%;
     }
 
     .h1 {
-        /* font-size: 170%; */
         font-size: 2.3rem;
     }
 
@@ -407,7 +397,6 @@ img {
         transform: translate(-13.5%);
         max-width: 60vw;
         margin-top: 5%;
-        /* height: 70vh; */
         height: 30rem;
         margin-bottom: 0;
     }
@@ -469,12 +458,10 @@ img {
     .content {
         text-align: center;
         width: 60vw;
-        /* font-size: 170%; */
         font-size: 2rem;
     }
 
     .h1 {
-        /* font-size: 170%; */
         font-size: 1.9rem;
     }
 
@@ -504,8 +491,6 @@ img {
         left: auto;
         transform: none;
         right: 6%;
-        /* top: 130%; */
-        /* top: 65vw; */
         top: 56em;
         max-width: 42vw;
         height: 70vh;

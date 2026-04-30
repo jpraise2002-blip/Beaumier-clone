@@ -10,26 +10,30 @@
     height: 100vh;
     z-index: 1500;
 }
+
 .topnav #myLinks {
     position: absolute;
     display: block;
     margin-left: 80%;
     width: 1300%;
 }
+
 #smallContainer {
     position: relative;
     top: -9%;
     display: none;
 }
-.extra-link{
+
+.extra-link {
     position: absolute;
     right: 0;
 }
+
 .topnav a {
-    background-color:#faf6ee;
+    background-color: #faf6ee;
     color: grey;
     text-decoration: none;
-    font-size:150%;
+    font-size: 150%;
     font-family: sans-serif;
     height: 10%;
     display: block;
@@ -37,11 +41,12 @@
     font-weight: bolder;
 }
 
-.discover a{
+.discover a {
     font-size: 127%;
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
 }
+
 .destinations {
     color: #212529;
 }
@@ -52,14 +57,14 @@
     left: 0;
     top: 0;
     padding: 0;
-    margin-left:100%;
+    margin-left: 100%;
     margin-bottom: 4.5vh;
-    color:#faf6ee;
+    color: #faf6ee;
     background-color: transparent;
-    /* font-size: 160%; */
     font-size: 1.2rem;
 }
-#closeBtn{
+
+#closeBtn {
     position: absolute;
     left: 0;
     top: 0;
@@ -71,61 +76,69 @@
 .topnav a:hover {
     color: #212529;
 }
+
 .topnav a.icon:hover {
-    color:#faf6ee;
+    color: #faf6ee;
 }
-.legals{
+
+.legals {
     margin-top: 20%;
 }
-.legals a{
+
+.legals a {
     color: black;
-    /* font-size:100% ; */
     font-size: 1.2rem;
 }
+
 .legals a:hover {
     color: #000000;
 }
 
-.languages{
+.languages {
     margin-top: 18%;
-    /* font-size: 100%; */
     font-size: 1.2rem;
 }
-.languages .english{
+
+.languages .english {
     color: black;
     font-family: sans-serif;
     font-weight: bolder;
 }
 
-.socials{
+.socials {
     margin-top: 18%;
-    /* font-size: 130%; */
     font-size: 1.5rem;
 }
-.spotify{
+
+.spotify {
     background-color: #faf6ee;
     border-radius: 50%;
 }
-.tiktok{
+
+.tiktok {
     background-color: black;
-    color:#faf6ee;
+    color: #faf6ee;
     border-radius: 40%;
 }
-.facebook{
-    background-color:#faf6ee;
+
+.facebook {
+    background-color: #faf6ee;
     color: black;
     border-radius: 50%;
 }
-.instagram{
+
+.instagram {
     background-color: black;
     color: #faf6ee;
     border-radius: 50%;
 }
-.linkedin{
+
+.linkedin {
     background-color: black;
     color: #faf6ee;
     border-radius: 20%;
 }
+
 #extraContainer {
     position: inherit;
     top: 12%;
@@ -139,45 +152,49 @@
 #destLink {
     display: none;
     margin-bottom: 21%;
-} 
-.commonLink a{
+}
+
+.commonLink a {
     height: fit-content;
     font-size: 125%;
     color: #000000;
     padding: 3% 0 0;
     margin-bottom: 0.5%;
 }
-.commonLink a:hover{
+
+.commonLink a:hover {
     color: black;
 }
+
 .sub {
-    font-size:75%;
+    font-size: 75%;
     padding-bottom: 0.2%;
     font-weight: lighter;
     font-family: 'Times New Roman', Times, serif;
 }
 
-#foodLink{
+#foodLink {
     display: none;
     margin-bottom: 21%;
 }
 
-#wellLink{
+#wellLink {
     display: none;
     margin-bottom: 21%;
 }
 
-#galLink{
+#galLink {
     display: none;
     margin-bottom: 21%;
 }
 
-#exitBtn{
+#exitBtn {
     margin-bottom: 0.5%;
     padding-bottom: 2%;
     font-weight: lighter;
     display: none;
 }
+
 #exitBtn a {
     color: #212529;
     font-weight: bold;
@@ -192,69 +209,83 @@
     height: 80vh;
     overflow-y: auto;
 }
+
 #mySecondLink {
     display: block;
-    left:0;
+    left: 0;
     margin-left: 5%;
     width: max-content;
 }
+
 .topnav #mySecondLink a {
     font-size: 150%;
 }
+
 .topnav #mySecondLink a:hover {
     color: #000000;
 }
+
 #mySecondLink .discover-two a {
-    font-size: 130% ;
+    font-size: 130%;
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
     font-weight: lighter;
 }
+
 #mySecondLink .destinations {
     color: #000000;
 }
+
 #wideContainer #extraContainer2nd {
     position: absolute;
     top: 12%;
     left: 0%;
-    margin-left:21.8% ;
+    margin-left: 21.8%;
     display: block;
     width: max-content;
     height: max-content;
 }
+
 .extra-link-2nd {
-    margin-left:8%;
+    margin-left: 8%;
 }
+
 .extra-link-3rd {
-    margin-left:20.5%;
+    margin-left: 20.5%;
 }
+
 .extra-link-4th {
-    margin-left:36.5%;
+    margin-left: 36.5%;
 }
+
 #destLink2nd {
     display: block;
     margin-bottom: 21%;
-} 
-.commonLink2nd a{
+}
+
+.commonLink2nd a {
     height: fit-content;
     width: max-content;
     font-size: 130%;
     color: #000000;
     padding: 6% 0 0%;
     padding-left: 15.2%;
-    /* margin-bottom: 4%; */
 }
-.commonLink2nd a:hover{
+
+.commonLink2nd a:hover {
     color: black;
 }
+
 #foodLink2nd {
     display: none;
     margin-bottom: 21%;
 }
+
 #wellLink2nd {
     display: none;
     margin-bottom: 21%;
 }
+
 #galLink2nd {
     display: none;
     margin-bottom: 21%;
@@ -264,42 +295,49 @@
     position: sticky;
     top: 3%;
     margin-top: -16.8%;
-    margin-left: 47.5%; 
+    margin-left: 47.5%;
     width: 50%;
 }
+
 .sidenav-images img {
     width: 100%;
     height: 58vh;
 }
-.sidenav-images .legals{
+
+.sidenav-images .legals {
     display: inline-block;
     margin-top: 4%;
     margin-right: 3%;
     font-size: 105%;
     font-weight: lighter;
 }
+
 .sidenav-images .languages {
     position: absolute;
-    display:inline-block ;
+    display: inline-block;
     margin-top: 4%;
     right: 1%;
     font-size: 105%
 }
+
 .sidenav-images .socials {
     display: inline-block;
     margin-top: 0;
     font-size: 110%;
 }
-.contact1{
+
+.contact1 {
     margin-right: 5%;
 }
 
 #foodPic {
     display: none;
 }
+
 #wellPic {
     display: none;
 }
+
 #galPic {
     display: none;
 }
@@ -313,6 +351,48 @@
     position: sticky;
     top: 3%;
     margin-top: -16.8%;
-    /* margin-top: -57.9%; */
     display: none;
+}
+
+@media (max-height:500px) {
+    .topnav #myLinks {
+        position: absolute;
+        display: block;
+        margin-left: 80%;
+        width: 94vw;
+        height: 70vh;
+        max-height: 100vh;
+        padding-bottom: 300px;
+        overflow-y: auto;
+    }
+
+    .extra-link {
+        position: absolute;
+        left: 32%;
+    }
+
+    #myLinks .for-landscape {
+        padding-top: 0.5em;
+    }
+
+    #myLinks .discover a {
+        padding-top: 1em;
+        padding-bottom: 0;
+    }
+
+    .legals {
+        margin-top: 3em;
+    }
+
+    .legals a {
+        padding-top: 0;
+    }
+
+    .languages {
+        margin-top: 1.5em;
+    }
+
+    .socials {
+        margin-top: 1.5em;
+    }
 }
