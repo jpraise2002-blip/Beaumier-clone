@@ -62,3 +62,43 @@ setInterval(() => {
 
 showSlide(slideIndex)
 
+
+
+let trackIndex = 0;
+const slideBox = document.querySelectorAll('.track-box');
+const indicators = document.querySelectorAll('.indicator');
+const slideTrack = document.querySelector('.second-track');
+
+function trackSlide(index) {
+    const boxWidth = slideBox[0].getBoundingClientRect().width;
+    slideTrack.style.transition = 'transform 0.8s ease-in-out';
+    slideTrack.style.transform = `translateX(-${index * boxWidth}px)`;
+    indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === (index % 4));
+    });
+}
+
+function prevButTwo() {
+    trackIndex = (trackIndex - 1 + slideBox.length) % slideBox.length;
+    trackSlide(trackIndex);
+}
+function nextButTwo() {
+    trackIndex = (trackIndex + 1) % slideBox.length;
+    trackSlide(trackIndex);
+}
+
+setInterval(() => {
+    trackIndex = (trackIndex + 1) % slideBox.length;
+    
+    if (trackIndex === 4) {
+        setTimeout(() => {
+            slideTrack.style.transition = 'none';
+            trackIndex = 0;
+            slideTrack.style.transform = 'translateX(0)';
+        }, 800)
+    }
+    
+    trackSlide(trackIndex);
+}, 6800)
+
+trackSlide(trackIndex);
