@@ -102,3 +102,43 @@ setInterval(() => {
 }, 6800)
 
 trackSlide(trackIndex);
+
+
+let showIndex = 0;
+const trackBox = document.querySelectorAll('.slide-box');
+const endicators = document.querySelectorAll('.endicator');
+const trackTrack = document.querySelector('.slides-track');
+
+function trackShow (index) {
+    const boxWidth = trackBox[0].getBoundingClientRect().width;
+    trackTrack.style.transition = 'transform 0.8s ease-in-out';
+    trackTrack.style.transform = `translateX(-${index * boxWidth}px)`;
+    endicators.forEach((endicator, i) => {
+    endicator.classList.toggle('active', i === (index % 10));
+    });
+}
+
+function prevButOne() {
+    showIndex = (showIndex - 1 + trackBox.length) % trackBox.length;
+    trackShow(showIndex);
+}
+function nextButOne() {
+    showIndex = (showIndex + 1) % trackBox.length;
+    trackShow(showIndex);
+}
+
+setInterval(() => {
+    showIndex = (showIndex + 1) % trackBox.length;
+    
+    if (showIndex === 10) {
+        setTimeout(() => {
+            trackTrack.style.transition = 'none';
+            showIndex = 0;
+            trackTrack.style.transform = 'translateX(0)';
+        }, 800)
+    }
+    
+    trackShow(showIndex);
+}, 2800)
+
+trackShow(showIndex);
