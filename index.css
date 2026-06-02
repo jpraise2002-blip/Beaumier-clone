@@ -674,27 +674,16 @@ img {
     font-weight: bolder;
 }
 
-.buttons {
+.buttons-first {
     position: absolute;
-    top: 5.9rem;
+    top: 1.4rem;
+    color: #4d4b49;
     right: 2%;
     display: flex;
-    color: white ;
     margin-top: 0;
     margin-left: 1.3rem;
     font-weight: bolder;
-    cursor: pointer;
     z-index: 500;
-}
-.buttons-one {
-    position: absolute;
-    top: 1.9rem;
-    color: #4d4b49;
-}
-.buttons-two {
-    position: absolute;
-    top: 4rem;
-    color: #4d4b49;
 }
 .button-house {
     position: relative;
@@ -704,9 +693,7 @@ img {
     text-align: center;
     border-radius: 50%;
     height: 40px;
-}
-.house-two {
-    background-color: rgb(228, 225, 225);
+    cursor: pointer;
 }
 .button-style {
     position: absolute;
@@ -715,9 +702,7 @@ img {
     cursor: pointer;
     font-size: 0.8rem;
 }
-.button-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 /* @keyframes stepScroll {
 
@@ -785,6 +770,7 @@ img {
     .slides-container {
         height: 1100px;
     }
+
     .hotel-slide {
         font-size: 1.2rem;
     }
@@ -830,10 +816,6 @@ img {
 
     .slides-container {
         height: 1200px;
-    }
-
-    .buttons-one {
-        margin-top: -5.9rem;
     }
     
     .hotel-slide {
@@ -888,6 +870,7 @@ img {
     .slides-container {
         height: 800px;
     }
+    
 
     .slide-box {
         height: 600px;
@@ -939,13 +922,30 @@ img {
     font-family: sans-serif;
     z-index: 10;
 }
+.buttons-second {
+    position: absolute;
+    top: 0;
+    /* top: 5.9rem; */
+    right: 2%;
+    display: flex;
+    color: white ;
+    margin-top: 0;
+    margin-left: 1.3rem;
+    font-weight: bolder;
+    z-index: 500;
+}
+.button-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
 
 .slide-head-house {
     position: relative;
     display: flex;
     margin-left: 1.55em;
     margin-top: 4%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     font-family: sans-serif;
     z-index: 10;
@@ -1089,11 +1089,20 @@ img {
     background: #ffffff;
 }
 
-
+@media (540px <=width <=768px) {
+    .buttons-second {
+    position: absolute;
+    top: 5.5rem;
+}
+}
 @media (768px <=width <=1170px) {
     .third-slide-container {
         height: 730px;
     }
+    .buttons-second {
+    position: absolute;
+    top: 5.5rem;
+}
 
     .third-slide-box {
         height: 730px;
@@ -1205,7 +1214,12 @@ img {
 }
 }
 
-@media (max-height:500px) {}
+@media (max-height:500px) {
+    .buttons-second {
+    position: absolute;
+    top: 5.5rem;
+}
+}
 
 :root {
     --box-width-two: 100vw;
@@ -1221,7 +1235,30 @@ img {
     font-weight: bold;
     font-family:sans-serif;
     font-size: 2rem;
+    overflow: hidden;
+    
 }
+.buttons-third {
+    position: absolute;
+    top: 0;
+    /* top: 5.9rem; */
+    right: 2%;
+    display: flex;
+    color: white ;
+    margin-top: 0;
+    margin-left: 1.3rem;
+    font-weight: bolder;
+    z-index: 500;
+}
+.buttons-two {
+    position: absolute;
+    top: 4rem;
+    color: #4d4b49;
+}
+.house-two {
+    background-color: rgb(228, 225, 225);
+}
+
 .second-track {
     display: flex;
     transition: transform 0.8s ease-in-out;

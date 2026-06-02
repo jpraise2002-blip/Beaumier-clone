@@ -26,6 +26,7 @@ window.addEventListener('scroll', function () {
 });
 
 
+
 let slideIndex = 0;
 const slides = document.querySelectorAll('.third-slide-box');
 const names = document.querySelectorAll('.slide-head');
@@ -37,7 +38,7 @@ function showSlide(index) {
     names.forEach((name, i) => {
         name.classList.toggle('active', i === index);
     });
-    slideIndex = index
+    slideIndex = index;
 }
 
 function prevBut() {
@@ -63,82 +64,178 @@ setInterval(() => {
 showSlide(slideIndex)
 
 
-
 let trackIndex = 0;
 const slideBox = document.querySelectorAll('.track-box');
 const indicators = document.querySelectorAll('.indicator');
+const prevTwo = document.getElementById('prevTwoId');
+const nextTwo = document.getElementById('nextTwoId');
 const slideTrack = document.querySelector('.second-track');
+const boxWidth = slideBox[0].getBoundingClientRect().width;
 
-function trackSlide(index) {
-    const boxWidth = slideBox[0].getBoundingClientRect().width;
+function updateIndicator(index) {
+    let indicatorIndex;
+
+    if (index >= 5) {
+        indicatorIndex = 0;
+    } else if (index <= 0) {
+        indicatorIndex = 3;
+    } else {
+    indicatorIndex = index - 1;
+    }
+
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+
+    if (indicators[indicatorIndex]) {
+        indicators[indicatorIndex].classList.add('active');
+    }
+}
+
+function trackSlide () {
+    trackIndex++;
     slideTrack.style.transition = 'transform 0.8s ease-in-out';
-    slideTrack.style.transform = `translateX(-${index * boxWidth}px)`;
-    indicators.forEach((indicator, i) => {
-    indicator.classList.toggle('active', i === (index % 4));
-    });
-}
+    slideTrack.style.transform = `translateX(${-trackIndex * boxWidth}px)`;
 
-function prevButTwo() {
-    trackIndex = (trackIndex - 1 + slideBox.length) % slideBox.length;
-    trackSlide(trackIndex);
-}
-function nextButTwo() {
-    trackIndex = (trackIndex + 1) % slideBox.length;
-    trackSlide(trackIndex);
-}
+    updateIndicator(trackIndex);
 
-setInterval(() => {
-    trackIndex = (trackIndex + 1) % slideBox.length;
-    
-    if (trackIndex === 4) {
+    if (trackIndex === 5) {
         setTimeout(() => {
             slideTrack.style.transition = 'none';
-            trackIndex = 0;
-            slideTrack.style.transform = 'translateX(0)';
+            trackIndex = 1;
+            slideTrack.style.transform = `translateX(${-trackIndex * boxWidth}px)`;
         }, 800)
     }
-    
-    trackSlide(trackIndex);
-}, 6800)
+}
 
+let trackTimer = setInterval(trackSlide, 6800);
 trackSlide(trackIndex);
+
+function prevButTwo() {
+    trackIndex--;
+    slideTrack.style.transition = 'transform 0.8s ease-in-out';
+    slideTrack.style.transform = `translateX(${-trackIndex * boxWidth}px)`;
+
+    updateIndicator(trackIndex);
+
+    if (trackIndex <= 0) {
+        setTimeout(() => {
+          slideTrack.style.transition = 'none';
+          trackIndex = 4;
+          slideTrack.style.transform = `translateX(${-trackIndex * boxWidth}px)`;  
+        }, 1000)
+    }
+}
+
+prevTwo.addEventListener('click', () => {
+    clearInterval(trackTimer);
+    prevButTwo();
+    trackTimer = setInterval(trackSlide, 6800);
+});
+
+function nextButTwo() {
+    trackIndex++;
+    slideTrack.style.transition = 'transform 0.8s ease-in-out';
+    slideTrack.style.transform = `translateX(${-trackIndex * boxWidth}px)`;
+    updateIndicator(trackIndex);
+
+    if (trackIndex >= 5) {
+        setTimeout(() => {
+          slideTrack.style.transition = 'none';
+          trackIndex = 1;
+          slideTrack.style.transform = `translateX(${-trackIndex * boxWidth}px)`;  
+        }, 800)
+    }
+}
+
+nextTwo.addEventListener('click', () => {
+    clearInterval(trackTimer);
+    nextButTwo();
+    trackTimer = setInterval(trackSlide, 6800);
+});
 
 
 let showIndex = 0;
 const trackBox = document.querySelectorAll('.slide-box');
 const endicators = document.querySelectorAll('.endicator');
 const trackTrack = document.querySelector('.slides-track');
+const prevOne = document.getElementById('prevOneId');
+const nextOne = document.getElementById('nextOneId');
+const slideWidth = trackBox[0].getBoundingClientRect().width;
+function updateEndicator(index) {
+    let endicatorIndex;
 
-function trackShow (index) {
-    const boxWidth = trackBox[0].getBoundingClientRect().width;
+    if (index >= 11) {
+        endicatorIndex = 0;
+    } else if (index <= 0) {
+        endicatorIndex = 9;
+    } else {
+        endicatorIndex = index - 1;
+    }
+
+    endicators.forEach(endicator => endicator.classList.remove('active'));
+
+    if (endicators[endicatorIndex]) {
+        endicators[endicatorIndex].classList.add('active');
+    }
+}
+
+function trackShow () {
+    showIndex++;
     trackTrack.style.transition = 'transform 0.8s ease-in-out';
-    trackTrack.style.transform = `translateX(-${index * boxWidth}px)`;
-    endicators.forEach((endicator, i) => {
-    endicator.classList.toggle('active', i === (index % 10));
-    });
-}
+    trackTrack.style.transform = `translateX(${-showIndex * slideWidth}px)`;
 
-function prevButOne() {
-    showIndex = (showIndex - 1 + trackBox.length) % trackBox.length;
-    trackShow(showIndex);
-}
-function nextButOne() {
-    showIndex = (showIndex + 1) % trackBox.length;
-    trackShow(showIndex);
-}
+    updateEndicator(showIndex);
 
-setInterval(() => {
-    showIndex = (showIndex + 1) % trackBox.length;
-    
-    if (showIndex === 10) {
+    if (showIndex === 11) {
         setTimeout(() => {
             trackTrack.style.transition = 'none';
-            showIndex = 0;
-            trackTrack.style.transform = 'translateX(0)';
-        }, 800)
+            showIndex = 1;
+            trackTrack.style.transform = `translateX(${-showIndex * slideWidth}px)`;
+        }, 1000)
     }
-    
-    trackShow(showIndex);
-}, 2800)
+}
+
+let sliderTimer = setInterval(trackShow, 6800);
+
+function prevButOne() {
+    showIndex--;
+    trackTrack.style.transition = 'transform 0.8s ease-in-out';
+    trackTrack.style.transform = `translateX(${-showIndex * slideWidth}px)`;
+    updateEndicator(showIndex);
+
+    if (showIndex <= 0) {
+        setTimeout(() => {
+          trackTrack.style.transition = 'none';
+          showIndex = 10;
+          trackTrack.style.transform = `translateX(${-showIndex * slideWidth}px)`;  
+        }, 1000)
+    }
+}
+
+prevOne.addEventListener('click', () => {
+    clearInterval(sliderTimer);
+    prevButOne();
+    sliderTimer = setInterval(trackShow, 6800);
+});
+
+function nextButOne() {
+    showIndex++;
+    trackTrack.style.transition = 'transform 0.8s ease-in-out';
+    trackTrack.style.transform = `translateX(${-showIndex * slideWidth}px)`;
+    updateEndicator(showIndex);
+
+    if (showIndex >= 11) {
+        setTimeout(() => {
+          trackTrack.style.transition = 'none';
+          showIndex = 1;
+          trackTrack.style.transform = `translateX(${-showIndex * slideWidth}px)`;  
+        }, 1000)
+    }
+}
+
+nextOne.addEventListener('click', () => {
+    clearInterval(sliderTimer);
+    nextButOne();
+    sliderTimer = setInterval(trackShow, 6800);
+});
 
 trackShow(showIndex);

@@ -1170,12 +1170,12 @@
             <div class="hotel-slide">
                 <h1>OUR HOTELS</h1>
             </div>
-            <div class="buttons buttons-one
+            <div class="buttons-first buttons-one
             ">
-                <div class="button-house house-one" onclick="prevButOne()">
+                <div id="prevOneId" class="button-house house-one">
                     <i class="fas fa-angle-left  button-style left-button"></i>
                 </div>
-                <div class="button-house house-one" onclick="nextButOne()">
+                <div id="nextOneId" class="button-house house-one">
                     <i class="fas fa-angle-right button-style right-button"></i>
                 </div>
 
@@ -1193,6 +1193,32 @@
                 <div class="endicator"></div>
             </div>
             <div class="slides-track">
+                <div class="slide-box">
+                    <img src="Hotel Images/hotel-courchevel.jpg" alt="10">
+                    <div class="image-text">
+                        <div class="image-text-1">LES 3 VALLEES</div>
+                        <div class="image-text-2">COURCHEVEL</div>
+                    </div>
+                    <div class="slide-text-down">
+                        <div>
+                            <a href="javascript:void(0);" class="up-link">
+                                LES 3 VALLEES
+                            </a>
+                        </div>
+                        <div class="slide-1up">
+                            COURCHEVEL FRANCE
+                        </div>
+                        <div class="slide-1down">
+                            Five-star chalets, heated pools overlooking the Three Valleys, and apre-ski that starts at
+                            your bar.
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="down-link">
+                                DISCOVER
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="slide-box">
                     <img src="Hotel Images/hotel-megeve-1.jpg" alt="1">
                     <div class="image-text">
@@ -1807,11 +1833,11 @@
                     <div class="slide-head">IBIZA</div>
                     <div class="slide-head">THE FRENCH ALPS</div>
                 </div>
-                <div class="buttons">
-                    <div class="button-house button-overlay" onclick="prevButTwo()">
+                <div class="buttons-second">
+                    <div class="button-house button-overlay" onclick="prevBut()">
                         <i class="fas fa-angle-left  button-style left-button"></i>
                     </div>
-                    <div class="button-house button-overlay" onclick="nextButTwo()">
+                    <div class="button-house button-overlay" onclick="nextBut()">
                         <i class="fas fa-angle-right button-style right-button"></i>
                     </div>
 
@@ -1918,11 +1944,11 @@
 
         <div class="fourth-slide-container">
             AWARDS
-            <div class="buttons buttons-two">
-                <div class="button-house house-two" onclick="prevButTwo()">
+            <div class="buttons-third buttons-two">
+                <div id="prevTwoId" class="button-house house-two">
                     <i class="fas fa-angle-left  button-style left-button"></i>
                 </div>
-                <div class="button-house house-two" onclick="nextButTwo()">
+                <div id="nextTwoId" class="button-house house-two">
                     <i class="fas fa-angle-right button-style right-button"></i>
                 </div>
 
@@ -1934,6 +1960,15 @@
                 <div class="indicator"></div>
             </div>
             <div class="second-track">
+                <div class="track-box">
+                    <div class="track-text">
+                        <div class="top-text">WORLD SKI AWARDS</div>
+                        <div class="mid-text">
+                            <div class="mid-sub">LE FITZ ROY - FRANCE'S BEST SKI HOTEL - 2024</div>
+                        </div>
+                        <div class="bottom-text bottom-push">DISCOVER MORE</div>
+                    </div>
+                </div>
                 <div class="track-box">
                     <div class="track-text">
                         <div class="top-text">MICHELEN KEYS</div>
@@ -1994,6 +2029,17 @@
                             <div class="mid-sub">CAPELONGUE - 2ND BEST HOTEL IN FRANCE - 2025</div>
                             <div class="mid-sub">LE MOULIN - 8TH BEST HOTEL IN FRANCE - 2025</div>
                             <div class="mid-sub">PETUNIA - 10TH BEST HOTEL IN SPAIN - 2025</div>
+                        </div>
+                        <div class="bottom-text">DISCOVER MORE</div>
+                    </div>
+                </div>
+                <div class="track-box">
+                    <div class="track-text">
+                        <div class="top-text">HOTEL AND LODGE MAGAZINE</div>
+                        <div class="mid-text">
+                            <div class="mid-sub">CAPELONGUE - BEST BOUTIQUE HOTEL - 2024</div>
+                            <div class="mid-sub">LE MOULIN - 4TH BEST BOUTIQUE HOTEL - 2023</div>
+                            <div class="mid-sub">LE FITZ ROY - 8TH BEST DESIGN HOTEL 2023</div>
                         </div>
                         <div class="bottom-text">DISCOVER MORE</div>
                     </div>
