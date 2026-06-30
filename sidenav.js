@@ -3,6 +3,7 @@ const myLinks = document.getElementById('myLinks');
 const mySecondLink = document.getElementById('mySecondLink');
 const mainContent = document.getElementById('mainContent');
 const headerText = document.getElementById('headerText');
+const header = document.querySelector(".header");
 const bookIcon = document.getElementById('bookIcon');
 const closeBtn = document.getElementById('closeBtn');
 const wideContainer = document.getElementById('wideContainer');
@@ -32,7 +33,7 @@ function smallScreen(event) {
 function smallScreenDisplay() {
     smallContainer.style.display = 'block';
     mainContent.style.display = 'none';
-    headerText.style.color = '#212529';
+    header.classList.add('scrolled-header');
     bookIcon.classList.add('book-tab');
     closeBtn.style.display = 'block';
 }
@@ -50,7 +51,7 @@ function largeScreen(event) {
 function largeScreenDisplay() {
     wideContainer.style.display = 'block';
     mainContent.style.display = 'none';
-    headerText.style.color = '#212529';
+    header.classList.add('scrolled-header');
     bookIcon.classList.add('book-tab');
     closeBtn.style.display = 'block';
 }
