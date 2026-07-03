@@ -51,7 +51,7 @@ body {
 }
 
 .header a img {
-    width: 180px;
+    width: 140px;
     filter: brightness(1) invert(1);
 
 }
@@ -345,7 +345,7 @@ img {
     }
 
     .scrolled-header {
-        padding-top: 2.5%;
+        padding-top: 5.8%;
         padding-bottom: 2%;
     }
 
@@ -1440,7 +1440,7 @@ img {
 }
 .sect-head{
     color:#181d27 ;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     font-family: sans-serif;
 }
@@ -1468,15 +1468,18 @@ img {
     margin: 20px 0px 3rem;
 }
 .sect-four-name{
-    margin: 30px 0 10px;
+    margin: 30px 0 0px;
 }
 .sect-four-name input {
     padding: 10px 5px;
     font-size: 16px;
-    margin-right: 10px;
+    width: 36vw;
+    margin-bottom: 10px;
     border-color: black;
-    
     border-radius: 5px;
+}
+.first-name {
+    margin-right: 3vw;
 }
 .sect-four-email{
     margin-bottom: 30px;
@@ -1486,10 +1489,10 @@ img {
     font-size: 16px;
     border-color: black;
     border-radius: 5px;
-    width: 418px;
+    width: 80vw;
 }
 .text-after-email{
-    width: 425px;
+    width: 83vw;
     font-size: 16px;
     margin-bottom: 30px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -1516,74 +1519,76 @@ img {
 }
 footer{
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 300px;
     padding-left: 2.5rem;
 }
 footer::before{
     content: '';
     position: absolute;
     margin-top: -2rem;
-    margin-left: 2.5rem;
     left: 0;
     width: 100%;
     height: 0.1px;
     background:#b1aeab;
 }
 
-@media (990px <= width <= 1170px) {
+@media (max-height: 540px) {
+    .sect-head{
+        font-size: 20px;
+    }
+    .sect-four-email input {
+        width: 77.4vw;
+    }
+    footer {
+        margin-top: -7rem;
+    }
+}
+@media (700px <= width <= 990px) {
+    .sect-head{
+        font-size: 20px;
+    }
+    .sect-four-email input {
+        width: 77.4vw;
+    }
+}
+@media (min-width: 990px) {
     .bottom-section {
         display: flex;
+    }
+    .sect-four-name input {
+        padding: 10px 2px;
+        font-size: 12px;
+        margin-right: 0px;
+        width: 25vw;
+    }
+    .sect-four-email input {
+        padding: 10px 5px;
+        font-size: 12px;
+        width: 25vw;
+    }
+    .text-after-email{
+        width: 26vw;
+        font-size: 14px;
     }
     .section-four {
         margin-left: 3vw;
     }
     .sect-two {
-        margin-left:  4vw;
-    }
-    .sect-three{
-        margin-right: 5vw;
-    }
-     .sect-four-name input {
-        padding: 10px 2px;
-        font-size: 12px;
-        margin-right: 0px;
-    }
-    .sect-four-email input {
-        padding: 10px 5px;
-        font-size: 12px;
-        width: 300px;
-    }
-    .text-after-email{
-        width: 310px;
-        font-size: 14px;
-    }
-}
-@media (1170px<= width<= 1310px) {
-    .bottom-section {
-        display: flex;
-    }
-    .section-four {
-        margin-left: 5vw;
-    }
-    .sect-two {
         margin-left:  3vw;
+        width: 20vw;
+    }
+    .sect-three {
+        margin-left: 3vw;
+        width: 15vw;
+    }
+    .sect-head{
+    font-size: 20px;
+    }
+    .sect-dis-link li {
+        font-size: 16px;
     }
 }
-@media (min-width: 1310px) {
-    .bottom-section {
-        display: flex;
-    }
-    .section-four {
-        margin-left: 5vw;
-    }
-    .sect-two {
-        margin-left:  5vw;
-        margin-right: 3vw;
-    }
-    .sect-three{
-        margin-right: 5vw;
-    }
-}
+
 /* * {
     outline: 1px solid red;
 } */
